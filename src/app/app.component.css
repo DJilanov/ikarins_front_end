@@ -1,0 +1,16 @@
+.no-paddings, custom-header {
+    padding: 0!important;
+}
+
+.center {
+    text-align: center;
+}
+
+custom-header {
+  z-index: 5;
+}
+
+/* Body style */
+.home {
+    background: rgb(214, 215, 217);
+}

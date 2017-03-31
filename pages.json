@@ -1,0 +1,10 @@
+{"type":"multiple","link":null,"title":{"bg":"Услуги и застраховки","en":"Услуги и застраховки ен"},"subCategories":["zastrahovki_za_vas","zastrahovki_za_biznesa_vi","urejdane_na_zastrahovatelni_pretencii","tehnichesko_obslujvane_na_avtomobili","konsultacii"]}
+{"type":"single","link":"promocionalni","title":{"bg":"Промоционални","en":"Промоционални ен"},"subCategories":null}
+{"type":"single","link":"novini","title":{"bg":"Новини","en":"Новини ен"},"subCategories":null}
+{"type":"single","link":"pri_shteta","title":{"bg":"При щета","en":"При щета ен"},"subCategories":null}
+{"type":"single","link":"za_nas","title":{"bg":"За нас","en":"За нас ен"},"subCategories":null}
+{"type":"sub-category","link":"zastrahovki_za_vas","title":{"bg":"Застраховки за вас","en":"Застраховки за вас ен"},"subCategories":null}
+{"type":"sub-category","link":"zastrahovki_za_biznesa_vi","title":{"bg":"Застраховки за бизнеса ви","en":"Застраховки за бизнеса ви ен"},"subCategories":null}
+{"type":"sub-category","link":"urejdane_na_zastrahovatelni_pretencii","title":{"bg":"Уреждане на застрахователни претенции","en":"Уреждане на застрахователни претенции ен"},"subCategories":null}
+{"type":"sub-category","link":"tehnichesko_obslujvane_na_avtomobili","title":{"bg":"Техническо обслужване на автомобили","en":"Техническо обслужване на автомобили ен"},"subCategories":null}
+{"type":"sub-category","link":"konsultacii","title":{"bg":"Консултации","en":"Консултации ен"},"subCategories":null}

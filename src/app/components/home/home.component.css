@@ -1,0 +1,5 @@
+.carousel {
+    height: 400px;
+    margin-top: -108px;
+    background: white url("./src/img/background.png") no-repeat center center; 
+}
