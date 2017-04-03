@@ -48,6 +48,7 @@ export class HeaderComponent {
           this.pages[pagesCounter]['sub'] = this.getSubCategories(this.pages[pagesCounter]['subCategories']);
         }
       }
+      console.log(this.pages);
   }
   
   private getSubCategories(subCategoriesArray) {
@@ -60,5 +61,13 @@ export class HeaderComponent {
       }
     }
     return subs;
+  }
+
+  private getPageByLink(link) {
+    for(let pagesCounter = 0; pagesCounter < this.pages.length; pagesCounter++) {
+      if(this.pages[pagesCounter]['link'] == link) {
+        return this.pages[pagesCounter];
+      }
+    }
   }
 }

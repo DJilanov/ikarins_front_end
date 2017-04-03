@@ -1,10 +1,8 @@
 <div class="carousel"></div>
-<div class="icons">
-  
+<div class="icons center">
+  <img 
+    *ngFor="let icon of icons"
+    [src]="buildLink(icon)" 
+    [alt]="icon.src"
+    class="col-xs-12 col-lg-2" />
 </div>
-<!--<div *ngFor="let category of sortCategories(categories)">
-  <product-list 
-    [category]=category 
-    [products]=productsByCategory(category)>
-  </product-list>
-</div>-->

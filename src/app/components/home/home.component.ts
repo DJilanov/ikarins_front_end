@@ -11,13 +11,32 @@ import { EventEmiterService } from '../../services/event.emiter.service';
 })
 
 export class HomeComponent {
-    // options of the inner carousel
-    // todo: Fill it with the real images and items
-    public slides: Array<Object>;
+    private pages:Array<Object> = [];
 
-    private pages =  Array<Object>();
+    private pagesData:Array<Object> = [];
 
-    private pagesData = Array<Object>();
+    private icons:Array<Object> = [
+        {
+            link: '',
+            src: 'zastrahovka_za_vas.png'
+        },
+        {
+            link: '',
+            src: 'zastrahovki_biznes.png'
+        },
+        {
+            link: '',
+            src: 'zastrahovatelni_pretencii.png'
+        },
+        {
+            link: '',
+            src: 'consulting.png'
+        },
+        {
+            link: '',
+            src: 'technical_support.png'
+        }
+    ];
 
     constructor(
         private dictionary: Dictionary,
@@ -34,5 +53,9 @@ export class HomeComponent {
     private onFetchedData(data) {
       this.pages = data.products;
       this.pagesData = data.categories;
+    }
+
+    private buildLink(icon) {
+        return './src/img/' + icon.src
     }
 }

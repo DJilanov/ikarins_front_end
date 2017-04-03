@@ -14,3 +14,8 @@ custom-header {
 .home {
     background: rgb(214, 215, 217);
 }
+
+md-select .mat-select-placeholder {
+  color: black !important;
+  font-size: 12px !important;
+}

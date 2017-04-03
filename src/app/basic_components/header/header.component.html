@@ -6,10 +6,27 @@
       alt="logo"/>
   </a>
   <span class="fill-remaining-space"></span>
+  <button md-button [routerLink]="['contacts']">
+    Начало
+  </button>
   <template ngFor #categoryObject [ngForOf]="pages" let-index="index">
-    <button md-button [routerLink]="['products', pages[index].link]" *ngIf="pages[index].type !== 'sub-category'">
+    <button 
+      *ngIf="pages[index].type == 'single'"
+      md-button 
+      [routerLink]="['products', pages[index].link]" >
       {{pages[index].title[dictionary.language]}}
     </button>
+    <md-select 
+      *ngIf="pages[index].type == 'multiple'"
+      [placeholder]="pages[index].title[dictionary.language]" 
+      [(ngModel)]="selectedValue" 
+      name="multiple">
+      <md-option 
+        *ngFor="let page of pages[index].sub" 
+        [value]="page.link">
+        {{getPageByLink(page.link).title[dictionary.language]}}
+      </md-option>
+    </md-select>
   </template>
   <button md-button [routerLink]="['contacts']">
     {{dictionary.getTexts('headerContact')}}

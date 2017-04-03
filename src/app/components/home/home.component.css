@@ -3,3 +3,17 @@
     margin-top: -108px;
     background: white url("./src/img/background.png") no-repeat center center; 
 }
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  /* Adding for cross browser support */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
