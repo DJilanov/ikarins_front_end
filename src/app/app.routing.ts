@@ -20,7 +20,7 @@ const appRoutes: Routes = [
       }
     }
   }, { 
-    path: 'products/:category', 
+    path: 'insurance/:category', 
     component: PageComponent,
     data: {
       meta: {

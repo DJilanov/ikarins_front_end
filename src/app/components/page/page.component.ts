@@ -25,6 +25,7 @@ export class PageComponent {
         private pagesDataService: PagesDataService,
         private eventEmiterService: EventEmiterService
     ) {
+        debugger;
       this.pages = pagesService.getPages();
       this.pagesData = pagesDataService.getPagesData();
       // on categories update we update the local array

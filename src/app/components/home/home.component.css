@@ -5,15 +5,21 @@
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
-  /* Adding for cross browser support */
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    /* Adding for cross browser support */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.icons img {
+    height: 150px;
+    width: 180px;
 }

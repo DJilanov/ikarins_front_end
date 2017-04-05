@@ -6,14 +6,14 @@
       alt="logo"/>
   </a>
   <span class="fill-remaining-space"></span>
-  <button md-button [routerLink]="['contacts']">
-    Начало
+  <button md-button [routerLink]="['']">
+    {{dictionary.getTexts('homePage')}}
   </button>
   <template ngFor #categoryObject [ngForOf]="pages" let-index="index">
     <button 
       *ngIf="pages[index].type == 'single'"
       md-button 
-      [routerLink]="['products', pages[index].link]" >
+      [routerLink]="['insurance', pages[index].link]" >
       {{pages[index].title[dictionary.language]}}
     </button>
     <md-select 
@@ -29,7 +29,7 @@
     </md-select>
   </template>
   <button md-button [routerLink]="['contacts']">
-    {{dictionary.getTexts('headerContact')}}
+    {{dictionary.getTexts('contactPage')}}
   </button>
   <span class="fill-remaining-space"></span>
   <button md-icon-button (click)="changeLanguage()">
