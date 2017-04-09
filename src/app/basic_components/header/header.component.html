@@ -11,7 +11,7 @@
   </button>
   <template ngFor #categoryObject [ngForOf]="pages" let-index="index">
     <button 
-      *ngIf="pages[index].type == 'single'"
+      *ngIf="pages[index].type == 'single' || pages[index].type == 'blog'"
       md-button 
       [routerLink]="['insurance', pages[index].link]" >
       {{pages[index].title[dictionary.language]}}
