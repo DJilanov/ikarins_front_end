@@ -2,13 +2,12 @@
 import 'hammerjs';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { HttpModule } from '@angular/http';
-import { MetaModule } from 'ng2-meta';
 import { Ng2Webstorage } from 'ng2-webstorage';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { RecaptchaModule, RecaptchaLoaderService } from 'ng2-recaptcha';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule, Validators }   from '@angular/forms';
 
 // Router
@@ -58,10 +57,9 @@ import { ErrorHandlerService } from './services/error.handler.service';
         BrowserModule,
         Ng2Webstorage,
         MaterialModule,
-        FlexLayoutModule.forRoot(),
         RecaptchaModule,
         ReactiveFormsModule,
-        MetaModule.forRoot(),
+        BrowserAnimationsModule,
         AgmCoreModule.forRoot({
           apiKey: 'AIzaSyDBbPzFEwNVTHNoZ-bz7YYqO1eMRPqTyUA'
         })

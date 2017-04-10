@@ -1,34 +1,53 @@
 1. Front-end
-Finish the suggestion list that looks like http://www.sectron.com/bg/product/20/evo192-kontrolen-panel-za-alarmeni-sistemi-digiplex-evo-s-192-zoni
-Higher domain autority by creatimg on the details page link to the original webpage of the item or review
-IF THE PRODUCT IS CURRENTLY GENERATED AND WE CLICK X FOR IMAGE JUST DELETE IT DONT SEND REQUEST!!!!
-There is issue on IE-11. The contact folder blows up. Fix it!!!!!
-There must be zoom over the zoomable details images
-
-1.5 admin
-Do the correct routing ( there will be probably errors )
+    Видове страници:
+        1.1. Home page 
+            Кароусел с картинка, 
+            Видове услуги с иконки
+            Информация
+        1.2. Страница тип продукт
+            Ляв бар с картинки
+            Кратко описание до всяка картинка.
+            Не трябва да излиза следващата картинка преди да почне нейното описание
+            Може и да е без картинка със селектор идващ от бек-енда
+            Текста да бъде със свободен формат ( някакъв тип хтмл едитор трябва да налея )
+        1.3. Блог в който да могат да се пишат статии
+            Всяка статия да е отделен обект като вариантите са 2
+                Записват се на сървъра ( риск да се загубят при авария )
+                Записват се в базата ( разрастване и забавяне на принципа и на работа )
+            Да не се виждат повече от 400 пиксела от всяка статия ( ако искаш да прочетеш трябва да кликнеш на нея )
+            Трябва да има тагове със загавията чрез които лесно и бързо да отвориш нещата
+        1.4 Страница тип Информация
+            Свободен текст ( добра идея е да се даде възможност за някакъв вид стилизиране или управление на текста )
+        1.5 Страница тип контакти.
+            Фул пейдж гугъл мапс отзад и за да е по красиво в горния десен ъгъл панел в който е информация за фирмата и картинката и ( да може да се коригира от админа също )
 
 2. Back-end
-When we upload main image we must delete the unused main image file if it is not used anywhere else
-When we delete product it is deleted from the cache but not from the db
+    Възможност да се променя навигацията ( като трябва да се измисли как да се вкарат суб категории )
+    Възможност да се правят нови страници с избор от тип и визуално да виждаш това което правиш отдолу как би изглеждало, както и самия начин на създаване да се напасва спрямо видовете страници
+    Възможност с клик на картата да се избират нови кординати динамично ( да се проучи как работи алгоритъма на гугъл )
 
-3. DevOps
-Enable HTTP2 and set certificate
-Controll browser caching with headers
+3. База данни
+    Таблица със навигационни категории ( всяка навигационна категория може да има под нива ( както е услуги и застраховки ))
+    Таблица със основни конфигурационни данни
+        Адрес, Телефони, Е-майл, Кординати за картата
+    Таблица блог с имена и текст на статиите ( не трябва да се дръпват при зареждане защото рискуваме да работи бавно при напълване на базата и може да се наложи да правим динамично решение)
 
-4. Optimisation 
-The carousel must not contain so many products
-Cache the response of the back-end for faster loading
-Try to use AOT compilation ( currently angular use JIT )
-Split the admin and the standart app to achieve faster page load ( it increase the size )
 
-5. To be done ( move to category when list is empty )
-Integrate dialog that shows the cart items each time you add new item
-Think about better design over the app
-Every product list must have description. It will raise our position in google by its 'Uniquenes'
-Add orders screen to the admin
-There must be no carousel on mobile
-Everyone can upload images to our server.. its not ok !!!
+4. Реализация
+    4.1 Създаване на нужните компоненти за Front-enda
+    4.2 Подкарване да работят със хард-коднати данни
+    4.3 Подкарване на бек-енд сервиращ данните със закачена база данни
+    4.4 Свързване на фронт-енда с бек-енда
+    4.5 Подкарване на админ панел
+    4.6 Свързване на админа с бек-енда
+    4.7 Подкарване на функционалностите на админа
 
-6. Reported bugs
-When you add image to already created file the image is not uploaded
+5. Неща които ще се забавят
+    5.1 Въртележката на 1вата страница. Ще изчака имплементирането на версията която пиша за сайта на тонката за да се закачи направо работеща а не да се свързват счупени неща
+
+6. Бележки
+    suggestion_list директивата да се подкара да работи във блога като предложения ( да се модифицира коренно алгоритъма и )
+    details директивата да се подкара да работи в блога като цъкнеш на линк или заглавие
+    В навигацията всичко да е с висок шрифт
+    Във апп компонент тс вкарай фетчването ан конфиг данните () както сега се фетчват пейдж дата )
+    Визибле таг на страниците

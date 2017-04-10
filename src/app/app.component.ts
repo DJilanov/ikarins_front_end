@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { MetaService } from 'ng2-meta';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Cache } from './cache/cache';
 import { Dictionary } from './dictionary/dictionary.service';
@@ -26,7 +25,6 @@ export class AppComponent {
         private router: Router,
         private fetcher: FetcherService,
         private dictionary: Dictionary,
-        private metaService: MetaService,
         private pagesService: PagesService,
         private pagesDataService: PagesDataService,
         private eventEmiterService: EventEmiterService,
