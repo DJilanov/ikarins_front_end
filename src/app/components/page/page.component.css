@@ -8,3 +8,7 @@ p {
     text-align: justify;
     text-indent: 2em;
 }
+
+.sub-page {
+    overflow:auto; 
+}

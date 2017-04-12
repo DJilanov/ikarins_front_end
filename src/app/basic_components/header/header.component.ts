@@ -76,15 +76,18 @@ export class HeaderComponent {
   private onLinkSelect(event) {
     this.router.navigate(['/insurance/', this.valueCtrl]);
     // TODO: FIX IT WHEN IT IS FIXED IN THE MATERIAL. There is still issue with the second select...
-    let span = event.source.trigger.nativeElement.getElementsByClassName('mat-select-value')[0];
-    if(span) {
-      span.innerHTML="";
-    }
-    let title = event.source.trigger.nativeElement.getElementsByClassName('mat-select-placeholder')[0];
-    if(title) {
-      title.style = [];
-      title.className = "mat-select-placeholder";
-    }
-    this.valueCtrl = '';
+    let timeoutEvent = event;
+    setTimeout((function() {
+        let span = timeoutEvent.source.trigger.nativeElement.getElementsByClassName('mat-select-value')[0];
+        if(span) {
+          span.innerHTML="";
+        }
+        let title = timeoutEvent.source.trigger.nativeElement.getElementsByClassName('mat-select-placeholder')[0];
+        if(title) {
+          title.style = [];
+          title.className = "mat-select-placeholder";
+        }
+        this.valueCtrl = '';
+    }),300);
   }
 }
