@@ -19,10 +19,11 @@
     <md-select 
       *ngIf="pages[index].type == 'multiple'"
       [placeholder]="pages[index].title[dictionary.language]" 
-      [(ngModel)]="selectedValue" 
+      [(ngModel)]="valueCtrl"
+      (change)="onLinkSelect($event)"
       name="multiple">
       <md-option 
-        *ngFor="let page of pages[index].sub" 
+        *ngFor="let page of pages[index].sub; let i = index" 
         [value]="page.link">
         {{getPageByLink(page.link).title[dictionary.language]}}
       </md-option>

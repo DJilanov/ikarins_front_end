@@ -1,4 +1,5 @@
 import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PagesService } from '../../services/pages.service';
 import { Dictionary } from '../../dictionary/dictionary.service';
@@ -13,6 +14,8 @@ import { EventEmiterService } from '../../services/event.emiter.service';
 })
 
 export class HeaderComponent {
+
+    private valueCtrl: string;
 
     private pages:Array<Object>;
 
@@ -68,5 +71,20 @@ export class HeaderComponent {
         return this.pages[pagesCounter];
       }
     }
+  }
+
+  private onLinkSelect(event) {
+    this.router.navigate(['/insurance/', this.valueCtrl]);
+    // TODO: FIX IT WHEN IT IS FIXED IN THE MATERIAL. There is still issue with the second select...
+    let span = event.source.trigger.nativeElement.getElementsByClassName('mat-select-value')[0];
+    if(span) {
+      span.innerHTML="";
+    }
+    let title = event.source.trigger.nativeElement.getElementsByClassName('mat-select-placeholder')[0];
+    if(title) {
+      title.style = [];
+      title.className = "mat-select-placeholder";
+    }
+    this.valueCtrl = '';
   }
 }
