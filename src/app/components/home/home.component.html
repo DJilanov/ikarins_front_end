@@ -2,7 +2,8 @@
 <div class="icons center">
   <img 
     *ngFor="let icon of icons"
-    [src]="buildLink(icon)" 
+    [routerLink]="['insurance', icon.link]"
+    [src]="buildSrc(icon)" 
     [alt]="icon.src"
     class="col-xs-12 col-lg-2" />
 </div>

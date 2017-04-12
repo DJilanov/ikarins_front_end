@@ -1,4 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Dictionary } from '../../dictionary/dictionary.service';
 import { PagesService } from '../../services/pages.service';
 import { PagesDataService } from '../../services/pages.data.service';
@@ -17,23 +18,23 @@ export class HomeComponent {
 
     private icons:Array<Object> = [
         {
-            link: '',
+            link: 'zastrahovki_za_vas',
             src: 'zastrahovka_za_vas.png'
         },
         {
-            link: '',
+            link: 'zastrahovki_za_biznesa_vi',
             src: 'zastrahovki_biznes.png'
         },
         {
-            link: '',
+            link: 'urejdane_na_zastrahovatelni_pretencii',
             src: 'zastrahovatelni_pretencii.png'
         },
         {
-            link: '',
+            link: 'konsultacii',
             src: 'consulting.png'
         },
         {
-            link: '',
+            link: 'tehnichesko_obslujvane_na_avtomobili',
             src: 'technical_support.png'
         }
     ];
@@ -52,6 +53,7 @@ export class HomeComponent {
     `;
 
     constructor(
+        private router: Router,
         private dictionary: Dictionary,
         private pagesService: PagesService,
         private pagesDataService: PagesDataService,
@@ -68,7 +70,7 @@ export class HomeComponent {
       this.pagesData = data.categories;
     }
 
-    private buildLink(icon) {
+    private buildSrc(icon) {
         return './src/img/' + icon.src
     }
 }
