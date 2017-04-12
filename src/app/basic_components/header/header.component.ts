@@ -48,7 +48,6 @@ export class HeaderComponent {
           this.pages[pagesCounter]['sub'] = this.getSubCategories(this.pages[pagesCounter]['subCategories']);
         }
       }
-      console.log(this.pages);
   }
   
   private getSubCategories(subCategoriesArray) {

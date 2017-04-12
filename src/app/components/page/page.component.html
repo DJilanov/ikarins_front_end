@@ -1,1 +1,15 @@
-<span>a</span>
+<div class="container">
+    <h1 class="page-title">{{pageData.page.title[dictionary.language]}}</h1>
+    <div class="page-content">
+        {{pageData.page.html[dictionary.language]}}
+    </div>
+    <div class="sub-pages">
+        <div class="sub-page" *ngFor="let page of pageData.subPages">
+            <div class="image-container col-xs-12 col-md-5">
+                <img [src]="'./src/img/' + page.image" />
+            </div>
+            <h2 [innerHTML]="page.title[dictionary.language]"></h2>
+            <p [innerHTML]="page.html[dictionary.language]"></p>
+        </div>
+    </div>
+</div>
