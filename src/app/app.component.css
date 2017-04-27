@@ -13,9 +13,16 @@ custom-header {
 /* Body style */
 .home {
     background: rgb(214, 215, 217);
+    min-height: 100vh!important;
 }
 
 md-select .mat-select-placeholder {
   color: black !important;
   font-size: 12px !important;
+}
+
+@media screen and (max-width: 992px) {
+    .mat-menu-panel {
+        max-width: 100%!important;
+    }
 }

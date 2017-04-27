@@ -39,18 +39,7 @@ export class HomeComponent {
         }
     ];
 
-    private pageInfo:string = `
-        Oт 2004 година IKARINS работи активно в областта на застраховането.
-        Нашата цел е да изберем най-подходящата застраховка за всеки от клиентите ни персонално
-        и според специфичните му изисквания.
-
-        През 2015 година закупихме "ИЗИИНС-Първи Интренет Застраховатален Брокер"ЕООД и чрез него увеличихме набора на застрахователни продукти.
-
-        В случай на застрахователно събитие
-        ние се грижим нашите клиенти да бъдат минимално притеснени от инцидента.
-        При пътно транспортно проишествир ни се обадете:
-        +359(0) 888 234 454
-    `;
+    private pageInfo:string = '';
 
     constructor(
         private router: Router,
@@ -59,16 +48,13 @@ export class HomeComponent {
         private pagesDataService: PagesDataService,
         private eventEmiterService: EventEmiterService
     ) {
-      this.pages = pagesService.getPages();
-      this.pagesData = pagesDataService.getPagesData();
-      // on categories update we update the local array
-      this.eventEmiterService.dataFetched.subscribe(data => this.onFetchedData(data));
+        this.pages = pagesService.getPages();
+        for(let pagesCounter = 0; pagesCounter < this.pages.length; pagesCounter++) {
+            if(this.pages[pagesCounter]['owner'] == 'home') {
+                this.pageInfo = this.pages[pagesCounter]['html'][dictionary['language']];
+            }
+        }
     };
-
-    private onFetchedData(data) {
-      this.pages = data.products;
-      this.pagesData = data.categories;
-    }
 
     private buildSrc(icon) {
         return './src/img/' + icon.src
