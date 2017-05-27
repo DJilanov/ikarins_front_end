@@ -40,3 +40,9 @@ md-select {
   border: none;
   outline: none;
 }
+
+md-toolbar button.categories-button {
+  font-size: 20px;
+  margin-left: 30px;
+
+}

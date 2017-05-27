@@ -1,5 +1,5 @@
 <!-- big-->
-<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-md hidden-sm hidden-xs">
+<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-sm hidden-xs">
   <a [routerLink]="['/']" class="logo pull-left">
     <img 
       src="./src/img/logo.png"
@@ -40,29 +40,30 @@
   </button>
 </md-toolbar>
 <!-- supеr small -->
-<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-lg">
-  <button md-icon-button [mdMenuTriggerFor]="menu">
+<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-lg hidden-md">
+  <a [routerLink]="['/']" class="logo pull-left">
+    <img 
+      src="./src/img/logo.png"
+      alt="logo"/>
+  </a>
+  <button class="categories-button" md-icon-button [mdMenuTriggerFor]="menu">
+    {{dictionary.getTexts('services') | uppercase}}
     <md-icon>more_vert</md-icon>
   </button>
   <md-menu #menu="mdMenu">
-    <button md-menu-item [routerLink]="['/']" class="logo pull-left">
-      <img 
-        src="./src/img/logo.png"
-        alt="logo"/>
-    </button>
     <ng-template ngFor #categoryObject [ngForOf]="pages" let-index="index">
       <button 
-        *ngIf="pages[index].type != 'multiple'"
+        *ngIf="(pages[index].type != 'multiple') && (pages[index].link !== undefined )"
         md-menu-item 
         [routerLink]="['insurance', pages[index].link]" >
         {{pages[index].title[dictionary.language]}}
       </button>
     </ng-template>
-    <button md-menu-item [routerLink]="['contacts']">
-      {{dictionary.getTexts('contactPage')}}
-    </button>
   </md-menu>
   <span class="fill-remaining-space"></span>
+  <button  class="categories-button" md-button [routerLink]="['contacts']">
+    {{dictionary.getTexts('contactPage')}}
+  </button>
   <button md-icon-button (click)="changeLanguage()">
     <image 
       [src]="'./src/img/' + dictionary.nextLanguage() + '.png'"
