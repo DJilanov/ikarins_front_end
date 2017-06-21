@@ -1,8 +1,6 @@
 <div class="container" *ngIf="pageData.page.title">
-    <h1 class="page-title">{{pageData.page.title[dictionary.language]}}</h1>
-    <div class="page-content">
-        {{pageData.page.html[dictionary.language]}}
-    </div>
+    <h1 class="page-title" [innerHTML]="pageData.page.title[dictionary.language]"></h1>
+    <div class="page-content" [innerHTML]="pageData.page.html[dictionary.language]"></div>
     <div class="sub-pages">
         <div class="sub-page" *ngFor="let page of pageData.subPages">
             <div class="image-container col-xs-12 col-md-5">

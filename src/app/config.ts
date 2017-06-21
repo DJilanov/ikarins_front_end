@@ -18,5 +18,5 @@ export class Config {
     // public static get adminLoginUrl():string { return "http://194.79.15.134:8080/api/admin/login"; }
 
 
-    public static get mapCoordinates():Object { return { lat: 42.711330, lng: 23.375995, zoom: 13 }; }
+    public static get mapCoordinates():Object { return { lat: 42.7003, lng: 23.3366024, zoom: 15 }; }
 }

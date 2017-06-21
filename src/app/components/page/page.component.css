@@ -12,3 +12,7 @@ p {
 .sub-page {
     overflow:auto; 
 }
+
+.container {
+    color: #2F4F4F;
+}

@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { Ng2Webstorage } from 'ng2-webstorage';
-import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AgmCoreModule } from '@agm/core';
+import { RatingModule } from "ngx-rating";
 import { BrowserModule }  from '@angular/platform-browser';
-import { RecaptchaModule, RecaptchaLoaderService } from 'ng2-recaptcha';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule, Validators }   from '@angular/forms';
 
@@ -54,10 +54,10 @@ import { ErrorHandlerService } from './services/error.handler.service';
         routing,
         HttpModule,
         FormsModule,
+        RatingModule,
         BrowserModule,
         Ng2Webstorage,
         MaterialModule,
-        RecaptchaModule,
         ReactiveFormsModule,
         BrowserAnimationsModule,
         AgmCoreModule.forRoot({
@@ -91,7 +91,6 @@ import { ErrorHandlerService } from './services/error.handler.service';
         Config,
         // router of the app
         appRoutingProviders,
-        RecaptchaLoaderService,
         // languages
         Dictionary,
         EnglishDictionary,

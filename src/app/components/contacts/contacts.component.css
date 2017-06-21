@@ -41,3 +41,27 @@ h2 {
 .phone-section .contact.duo {
   margin-top: 8px;
 }
+
+.rating {
+  color: rgb(242, 118, 28)
+}
+
+a:link {
+    color: 	#2F4F4F;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #2F4F4F;
+}
+
+/* mouse over link */
+a:hover {
+    color: #DC143C;
+}
+
+/* selected link */
+a:active {
+    color: blue;;
+}

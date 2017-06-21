@@ -19,6 +19,9 @@
         <div class="col-xs-9 contact duo">
           <a href="tel:{{dictionary.getTexts('contactPhone1')}}">{{dictionary.getTexts('contactPhone1')}}</a>
           <a href="tel:{{dictionary.getTexts('contactPhone2')}}">{{dictionary.getTexts('contactPhone2')}}</a>
+          <a href="tel:{{dictionary.getTexts('contactPhone3')}}">{{dictionary.getTexts('contactPhone3')}}</a>
+          <a href="tel:{{dictionary.getTexts('contactPhone4')}}">{{dictionary.getTexts('contactPhone4')}}</a>
+          <a href="tel:{{dictionary.getTexts('contactPhone5')}}">{{dictionary.getTexts('contactPhone5')}}</a>
         </div>
       </div>
       <div class="col-xs-12 col-md-3">
@@ -29,7 +32,9 @@
         </div>
         <div class="col-xs-9 contact">
           <div class="bold">
-            <a href="viber://add?number=%2B359878422063&text=hey">{{dictionary.getTexts('contactPhone1')}}</a>
+            <a href="viber://add?number=%{{dictionary.getTexts('contactPhone3')}}&text=hey">{{dictionary.getTexts('contactPhone3')}}</a>
+            <a href="viber://add?number=%{{dictionary.getTexts('contactPhone4')}}&text=hey">{{dictionary.getTexts('contactPhone4')}}</a>
+            <a href="viber://add?number=%{{dictionary.getTexts('contactPhone5')}}&text=hey">{{dictionary.getTexts('contactPhone5')}}</a>
             </div>
         </div>
       </div>
@@ -41,7 +46,7 @@
         </div>
         <div class="col-xs-9 contact">
           <div class="bold">
-            <a target="_blank" href="http://www.facebook.com/Jilanovltd/">Jilanovltd</a>
+            <a target="_blank" href="https://www.facebook.com/Ikar-Ins-158552657688661/?fref=ts">Ikar Ins</a>
           </div>
         </div>
       </div>
@@ -53,7 +58,7 @@
         </div>
         <div class="col-xs-9 contact">
           <div class="bold">
-            <a href="skype:t_jilanov?chat">t_jilanov</a>
+            <a href="skype:ikarins?chat">ikarins</a>
           </div>
         </div>
       </div>
@@ -65,14 +70,14 @@
       <h4 class="red">{{dictionary.getTexts('contactRules')}}</h4>
   </div>
   <div class="map-container col-xs-12 no-paddings">
-    <sebm-google-map 
+    <agm-map 
       [zoom]="mapCoordinates.zoom"
       [latitude]="mapCoordinates.lat" 
       [longitude]="mapCoordinates.lng">
-      <sebm-google-map-marker 
+      <agm-marker 
         [latitude]="mapCoordinates.lat" 
         [longitude]="mapCoordinates.lng">
-        <sebm-google-map-info-window [isOpen]="true">
+        <agm-info-window [isOpen]="true">
           <div class="info-window-container">
             <div class="col-xs-2">
               <img 
@@ -81,11 +86,20 @@
             </div>
             <div class="col-xs-10 company">
               <div>{{dictionary.getTexts('headerCompany')}}</div>
-              <div> рейтинг 4.7 звезди <span>(193)</span></div>
+              <div>
+                <span class="rating"> 
+                  <span>{{starsCount}} </span>
+                  <rating [(ngModel)]="starsCount"
+                    [readonly]="true"> 
+                  </rating>
+                  <span>(493)</span>
+                </span>
+              </div>
+              <div>{{dictionary.getTexts('companyAddress')}}</div>
             </div>
           </div>
-        </sebm-google-map-info-window>
-      </sebm-google-map-marker>
-    </sebm-google-map>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
   </div>
 </div>
