@@ -7,7 +7,8 @@ export class Config {
     public static get defaultLang():string { return 'bg'; }
     public static get languages():Array<string> { return ['bg', 'en']; }
     // urls
-    public static get pagesUrl():string { return "http://61148759.ngrok.io/api/pages"; }
+    // public static get pagesUrl():string { return "http://61148759.ngrok.io/api/pages"; }
+    public static get pagesUrl():string { return "http://http://194.79.15.200/api/pages"; }
 
     // production
     // public static get productsAndCategoriesUrl():string { return "http://194.79.15.134:8080/api/productsAndCategories"; }
