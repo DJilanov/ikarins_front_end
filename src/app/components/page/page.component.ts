@@ -19,6 +19,7 @@ export class PageComponent {
     private pages: Array<Object>;
     private pagesData: Array<Object>;
 
+    private pageType: String = '';
     private insuranseLink: String = '';
 
     constructor(
@@ -59,9 +60,10 @@ export class PageComponent {
                 }
                 if(this.pagesData[pagesCounter]['type'] == 'sub-page') {
                     this.pageData['subPages'].push(this.pagesData[pagesCounter])
+                    // if this.pagesData[pagesCounter].html[dictionary.language].length > 900
+                    // добави бутон който да отваря в нова страница като отделна
                 }
             }
         }
-        console.log(this.pageData);
     }
 }

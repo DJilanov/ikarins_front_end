@@ -1,5 +1,5 @@
 <div class="carousel"></div>
-<div class="icons center hidden-md hidden-sm hidden-xs">
+<div class="icons center hidden-sm hidden-xs">
   <img 
     *ngFor="let icon of icons"
     [routerLink]="['insurance', icon.link]"
@@ -7,7 +7,7 @@
     [alt]="icon.src"
     class="col-sm-12 col-lg-2" />
 </div>
-<div class="icons center hidden-lg">
+<div class="icons center hidden-lg hidden-md">
   <div>
     <img 
       *ngFor="let icon of icons"
