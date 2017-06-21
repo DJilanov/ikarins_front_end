@@ -7,8 +7,8 @@
   "author": "Dimitar Jilanov",
   "scripts": {
     "develop": "webpack-dev-server --inline --hot --progress --host 0.0.0.0 --port 7000",
-    "build:prod": "NODE_ENV=production webpack -p --config config/webpack.prod.js --optimize-minimize --optimize-max-chunks 15 --optimize-min-chunk-size 10000",
-    "build:partial": "NODE_ENV=production webpack -p --config config/webpack.prod.js --optimize-minimize --optimize-max-chunks 15 --optimize-min-chunk-size 10000",
+    "build:prod": "webpack -p --config config/webpack.prod.js --optimize-minimize --optimize-max-chunks 15 --optimize-min-chunk-size 10000",
+    "build:partial": "webpack -p --config config/webpack.prod.js --optimize-minimize --optimize-max-chunks 15 --optimize-min-chunk-size 10000",
     "build:optimise": "node -e \"require('./scripts/imageUpdator.js').optimiseImages();\"",
     "build": "webpack"
   },
