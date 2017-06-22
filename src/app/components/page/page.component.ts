@@ -5,6 +5,8 @@ import { PagesService } from '../../services/pages.service';
 import { PagesDataService } from '../../services/pages.data.service';
 import { EventEmiterService } from '../../services/event.emiter.service';
 
+const blogLink: string = 'novini';
+
 @Component({
     selector: 'page',
     styleUrls: ['./page.component.css'],
@@ -19,8 +21,9 @@ export class PageComponent {
     private pages: Array<Object>;
     private pagesData: Array<Object>;
 
-    private pageType: String = '';
     private insuranseLink: String = '';
+
+    private enableShortMessages: Boolean = false;
 
     constructor(
         private router: Router,
@@ -36,6 +39,7 @@ export class PageComponent {
     private setParams(params) {
         if(params['insurance']) {
             this.insuranseLink = params.insurance.toLowerCase();
+            this.enableShortMessages = ( blogLink == this.insuranseLink );
             this.pages = this.pagesService.getPages();
             this.pagesData = this.pagesDataService.getPagesData();
             this.getPageData();
@@ -59,7 +63,7 @@ export class PageComponent {
                     this.pageData['page'] = this.pagesData[pagesCounter]
                 }
                 if(this.pagesData[pagesCounter]['type'] == 'sub-page') {
-                    this.pageData['subPages'].push(this.pagesData[pagesCounter])
+                    this.pageData['subPages'].push(this.pagesData[pagesCounter]);
                     // if this.pagesData[pagesCounter].html[dictionary.language].length > 900
                     // добави бутон който да отваря в нова страница като отделна
                 }

@@ -5,6 +5,7 @@ export class BulgarianDictionary {
     public language = {
         "homePage": "Начало",
         "services": "Видове услуги",
+        "servicesShort": "Услуги",
         "contactPage": "Контакти",
         "companyAddress": "1527 София , ул. Стара планина 37",
         "contactPhone1": "+359/2/9433799",

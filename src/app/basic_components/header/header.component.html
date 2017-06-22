@@ -39,8 +39,8 @@
       [alt]="dictionary.language"></image>
   </button>
 </md-toolbar>
-<!-- supеr small -->
-<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-lg hidden-md">
+<!-- small -->
+<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-lg hidden-md hidden-xs">
   <a [routerLink]="['/']" class="logo pull-left">
     <img 
       src="./src/img/logo.png"
@@ -48,6 +48,37 @@
   </a>
   <button class="categories-button" md-icon-button [mdMenuTriggerFor]="menu">
     {{dictionary.getTexts('services') | uppercase}}
+    <md-icon>more_vert</md-icon>
+  </button>
+  <md-menu #menu="mdMenu">
+    <ng-template ngFor #categoryObject [ngForOf]="pages" let-index="index">
+      <button 
+        *ngIf="(pages[index].type != 'multiple') && (pages[index].link !== undefined )"
+        md-menu-item 
+        [routerLink]="['insurance', pages[index].link]" >
+        {{pages[index].title[dictionary.language]}}
+      </button>
+    </ng-template>
+  </md-menu>
+  <span class="fill-remaining-space"></span>
+  <button  class="categories-button" md-button [routerLink]="['contacts']">
+    {{dictionary.getTexts('contactPage')}}
+  </button>
+  <button md-icon-button (click)="changeLanguage()">
+    <image 
+      [src]="'./src/img/' + dictionary.nextLanguage() + '.png'"
+      [alt]="dictionary.language"></image>
+  </button>
+</md-toolbar>
+<!-- super small -->
+<md-toolbar *ngIf="pages.length > 0"  color="primary" class="hidden-lg hidden-md hidden-sm">
+  <a [routerLink]="['/']" class="logo pull-left">
+    <img 
+      src="./src/img/logo.png"
+      alt="logo"/>
+  </a>
+  <button class="categories-button" md-icon-button [mdMenuTriggerFor]="menu">
+    {{dictionary.getTexts('servicesShort') | uppercase}}
     <md-icon>more_vert</md-icon>
   </button>
   <md-menu #menu="mdMenu">

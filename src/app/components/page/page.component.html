@@ -7,7 +7,8 @@
                 <img [src]="'./src/img/' + page.image" />
             </div>
             <h2 [innerHTML]="page.title[dictionary.language]"></h2>
-            <p [innerHTML]="page.html[dictionary.language]"></p>
+            <p [innerHTML]="page.html[dictionary.language]" *ngIf="!enableShortMessages"></p>
+            <p [innerHTML]="page.html[dictionary.language]" *ngIf="enableShortMessages"></p>
         </div>
     </div>
 </div>
