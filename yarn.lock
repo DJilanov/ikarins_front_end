@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@agm/core@^1.0.0-beta.0":
+  version "1.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@agm/core/-/core-1.0.0-beta.0.tgz#5ca53f0efa321e1e24c7ba3a6be72f96bccf82a4"
+
 "@angular/animations@^4.0.1":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-4.2.3.tgz#686926a69d0c9c26a9bcad26cd6fbd0245bb6c1b"
@@ -290,10 +294,6 @@ amdefine@>=0.0.4, amdefine@^1.0.0:
 angular-2-local-storage@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/angular-2-local-storage/-/angular-2-local-storage-1.0.1.tgz#3b846c90b2fffc9124f7bacc347f22d043a1e3a4"
-
-angular2-google-maps@0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/angular2-google-maps/-/angular2-google-maps-0.17.0.tgz#ad8366fa4e5c56de0b8b20f003b5f7a1da06ffe3"
 
 angular2-template-loader@0.6.0:
   version "0.6.0"
@@ -3419,6 +3419,10 @@ ng2-webstorage@1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/ng2-webstorage/-/ng2-webstorage-1.6.2.tgz#b363fedf56796a9ad8566cd79c2e5c7ad3473668"
 
+ngx-rating@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/ngx-rating/-/ngx-rating-0.0.9.tgz#1c673d6e597642e430f980064be8571663b0fc16"
+
 no-case@^2.2.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.1.tgz#7aeba1c73a52184265554b7dc03baf720df80081"
@@ -5651,16 +5655,9 @@ write-file-atomic@^1.1.2:
     imurmurhash "^0.1.4"
     slide "^1.1.5"
 
-ws@1.0.1:
+ws@1.0.1, ws@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/ws/-/ws-1.0.1.tgz#7d0b2a2e58cddd819039c29c9de65045e1b310e9"
-  dependencies:
-    options ">=0.0.5"
-    ultron "1.0.x"
-
-ws@^1.0.1:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.4.tgz#57f40d036832e5f5055662a397c4de76ed66bf61"
   dependencies:
     options ">=0.0.5"
     ultron "1.0.x"
